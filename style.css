@@ -1,0 +1,506 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+     font-family: "Roboto Slab", serif;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+img {
+    width: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    
+    align-items: center;
+    width:80%;
+    padding-top: 1rem;
+    position: absolute;
+    color: white;
+    top: 0;
+  left: 10%;
+  right: 15%;
+  z-index: 1000;
+
+  background: transparent;
+    /* background: yellow; */
+}
+
+
+header i {
+  color: white;
+}
+
+.parent-nav-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    gap: 2.5rem;
+}
+
+
+
+ul {
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.social-media-container {
+    
+    display: flex;
+    gap: 1.6rem;
+    align-items: center;
+}
+
+.hero-section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: url(eCom\ images/home-hero-bg.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.lay-over {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+   background: rgba(17, 27, 25, 0.633);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+}
+
+.lay-over-text-container {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    font-size: 2rem;
+    width: 50%;
+}
+
+.lay-over-text-container p {
+    font-size: 1rem;
+}
+
+button {
+
+    width: 8rem;
+    height: 3rem;
+    border-radius: 30px;
+    border: transparent;
+    background-color: rgb(136,173,53);
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/* CART LIST CONTAINER */
+
+.cart-container {
+    background-color: #ffffff;
+    width: 35%;
+    height: 100vh;
+    z-index: 1001;
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+
+    
+}
+
+.cart-title-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 3%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    width: 100%;
+}
+
+#continue-shopping {
+    width: 90%;
+    border-radius: 30px;
+    margin-bottom: 1rem;
+}
+
+#close-cart i , #cart-logo{
+
+    cursor: pointer;
+}
+
+.cart-display {
+    transform: translateX(0);
+}
+
+.product-qualities {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding-top: 2rem;
+    border-bottom: 1px solid black;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+   width: 80%;
+   margin: 0px auto;
+  
+}
+
+.quality-container h3 {
+ font-weight: 500;
+ margin-bottom: 0.5rem;
+}
+
+.quality-container p {
+ font-weight: 200;
+}
+
+.quality-container div {
+    background: rgb(236,244,211);
+    width: 60px;
+    height: 60px;
+    border-radius: 5rem;
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/* product grid SECTION*/
+
+
+
+
+.trending-product-container {
+    margin-top: 7rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    
+    gap: 6rem;
+    
+}
+
+.trending-product-container h1 {
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+
+.parent-products-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    margin: 0px auto;
+    width: 80%;
+    
+}
+
+.product-container {
+     flex: 1;
+    min-width: 0;
+}
+
+.product-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+.img-container {
+    position: relative;    
+    display: inline-block;
+    
+}
+
+
+.img-container:hover .add-to-cart {
+    opacity: 1;
+}
+
+
+.add-to-cart {
+    position: absolute;
+    background-color: #ffffff;
+    display: flex;
+    
+    align-content: center;
+    background-position: center;
+    top: 5%;
+    right: 5%;  
+    height: 40px;
+    width: 40px; 
+    border-radius: 50%;   
+    
+    opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+
+}
+
+
+.product-info-container {
+    text-align: left;
+}
+
+.product-info-container h4 {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+
+
+#ratings {
+    margin-bottom: 0.5rem;
+}
+
+#product-category {
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: rgb(117, 119, 119);
+}
+
+
+/* FLASH SALE SECTION */
+
+.flash-sale-container {
+    position: relative;
+    background-image: url(eCom\ images/middle-cta.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 7rem;
+    height: 50vh;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.flash-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+    gap: 2rem;
+    width: 38%;
+    color: white;
+}
+
+.flash-text-container h1 {
+    font-size: 2.5rem;
+}
+
+
+.flash-layover {
+    height: 50vh;
+}
+
+.flash-btn {
+    background-color: transparent;
+    border: 1px solid white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.flash-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+
+.categories .product-info-container {
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.all-green-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+    background-color: rgb(236,244,211);
+    margin-top: 5rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+
+
+}
+
+.green img {
+    width: 100%;
+}
+
+.green {
+    width: 36%;
+}
+
+
+.green-text-container {
+    width: 37%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.green-text-container h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.insights-container {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    
+}
+
+.insights-container p {
+    font-weight: 300;
+}
+
+.insights-container h2 {
+    font-weight: 400;
+}
+
+
+.green-description {
+    border-bottom: 1px solid rgb(195, 195, 195);
+    padding-bottom: 2rem;
+}
+
+
+
+.customer-review-container {
+
+    background: rgb(236,244,211);
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    align-items: center;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    margin-top: 7rem;
+}
+
+
+.review-card {
+    background: #ffffff;
+   width: 100%;
+   
+    padding: 1.5rem;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.review-card p {
+    font-weight: 400;
+}
+
+.client-identity {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+.client-identity img {
+    border-radius: 50%;
+    
+}
+
+.client-identity .img-container {
+    width: 13%;
+}
+
+.review {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 38%;
+}
+
+.grid-1 {
+    align-self: flex-start;
+}
+
+.customer-text-container {
+    font-size: 1.3rem;
+}
+
+.customer-text-container p {
+    font-size: 1rem;
+}
+
+.perfect-plant {
+    margin-top: 0;
+    background-image: url(eCom\ images/footer-bg.jpg);
+    background-color: rgb(236,244,211);
+}
+
+.perfect-plant .flash-text-container {
+    width: 50%;
+}
+
+.perfect-plant p {
+    width: 50%;
+}
+
+.perfect-plant button {
+    background: rgb(136,173,53);
+    border: none;
+}
+
+.perfect-plant button:hover {
+background-color: rgb(105,137,39);
+color: white;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(236,244,211);
+    padding-top: 4rem;
+    border-bottom: 1px solid rgb(203, 201, 201);
+    padding-bottom: 3rem;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.footer {
+    background-color: rgb(236,244,211);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding-bottom: 2rem;
+}
+
+
+
