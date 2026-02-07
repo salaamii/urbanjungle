@@ -718,6 +718,30 @@ footer {
     font-size: 1.4rem;
 }
 
+.customer-review-container {
+flex-direction: column;
+
 }
 
+.review {
+    
+    width: 90%;
+}
 
+.grid-1 {
+    align-self: center;
+}
+
+.customer-text-container {
+    font-size: 1.6rem;
+}
+
+.customer-text-container p {
+    font-size: 1.3rem;
+}
+
+.review-card p {
+    font-size: 1.5rem;
+}
+
+}
