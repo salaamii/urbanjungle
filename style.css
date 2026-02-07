@@ -31,7 +31,6 @@ header {
   z-index: 1000;
 
   background: transparent;
-    /* background: yellow; */
 }
 
 
@@ -75,7 +74,7 @@ ul {
     position: absolute;
     width: 100%;
     height: 100vh;
-   background: rgba(17, 27, 25, 0.633);
+   background: rgba(29, 35, 35, 0.633);
    display: flex;
    align-items: center;
    justify-content: center;
@@ -89,6 +88,7 @@ ul {
     align-items: center;
     gap: 2rem;
     font-size: 2rem;
+    font-weight: 400;
     width: 50%;
 }
 
@@ -234,7 +234,7 @@ button {
     align-items: center;
     text-align: center;
     padding-top: 2rem;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(196, 196, 196);
     padding-bottom: 2rem;
     margin-bottom: 2rem;
    width: 80%;
@@ -255,7 +255,7 @@ button {
     background: rgb(236,244,211);
     width: 60px;
     height: 60px;
-    border-radius: 5rem;
+    border-radius: 50%;
     margin: 0px auto;
     display: flex;
     justify-content: center;
@@ -471,6 +471,9 @@ button {
 
 
 
+/* CUSTOMER REVIEWS */
+
+
 .customer-review-container {
 
     background: rgb(236,244,211);
@@ -581,5 +584,64 @@ footer {
 
 
 
+@media screen and (max-width: 500px) {
+
+    html {
+        font-size: 62.5%;
+    }
+
+    .parent-nav-container {
+
+        display: none;
+    }
+
+    header {
+        width: 100%;
+       left: 7%;
+    }
+
+    .logo-container {
+        width: 35%;
+    }
+
+    .hero-section, .lay-over {
+        height: 67vh;
+    }
+
+    .lay-over-text-container {
+        width: 90%;
+        margin-top: 6rem;
+        gap: 3rem;
+    }
+
+     .lay-over-text-container h1{
+        
+        font-weight: 500;
+    }
+
+    button {
+        width: 11rem;
+        height: 4rem;
+    }
+
+    .lay-over-text-container p {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.product-qualities {
+    flex-direction: column;
+    gap: 3rem;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    width: 90%;
+}
+
+.quality-container div{
+   width: 50px;
+    height: 50px;
+}
+
+}
 
 
