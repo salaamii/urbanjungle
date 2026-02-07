@@ -744,4 +744,18 @@ flex-direction: column;
     font-size: 1.5rem;
 }
 
+.perfect-plant .flash-text-container, .perfect-plant p {
+    width: 90%;
+}
+
+.perfect-plant p{
+    font-size: 1.4rem;
+}
+
+footer {
+    flex-direction: column;
+    gap: 3rem;
+}
+
+
 }
