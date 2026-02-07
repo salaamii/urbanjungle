@@ -437,7 +437,7 @@ button {
 
 
 .green-text-container {
-    width: 37%;
+    width: 35%;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -596,7 +596,7 @@ footer {
     }
 
     header {
-        width: 100%;
+        /* width: 100%; */
        left: 7%;
     }
 
@@ -692,6 +692,30 @@ footer {
 .categories .product-container {
    
     flex: 0 0 100%;
+}
+
+.all-green-container {
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.8rem;
+}
+
+.green, .green-text-container {
+    width: 90%;
+    font-size: 1.5rem;
+    font-weight: 300;
+   
+}
+
+.green-text-container h1 {
+    font-size: 3rem;
+   
+}
+
+.insights-container {
+    font-size: 1.4rem;
 }
 
 }
