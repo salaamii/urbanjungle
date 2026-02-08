@@ -36,6 +36,7 @@
 
             <div class="cart-amount-container">
                <i id="cart-logo" class="fa-sharp fa-solid fa-cart-shopping fa-lg"></i>
+               <span id="cart-counter"></span>
             </div>
         </div>
     </header>
@@ -59,40 +60,6 @@
             </div>
 
             <div id="cart-items-container">
-
-                <div class="item-container">
-
-                    <div class="img-details">
-                            <div class="checkout-img img-container"><img src="eCom images/product-06-276x300.jpg" alt=""></div>
-
-                            <div class="item-details">
-                                <p id="product-name">Silver crest</p>
-                                <p>1 x $92.00</p>
-                                
-                            </div>
-                    </div>    
-                    
-                    <div class="delete"><i class="fa-solid fa-xmark" style="color: #c4c4c5;"></i></div>
-            
-                </div>
-
-                <div class="item-container">
-
-                    <div class="img-details">
-                            <div class="checkout-img img-container"><img src="eCom images/product-06-276x300.jpg" alt=""></div>
-
-                            <div class="item-details">
-                                <p id="product-name">Silver crest</p>
-                                <p>1 x $92.00</p>
-                                
-                            </div>
-                    </div>    
-                    
-                    <div class="delete"><i class="fa-solid fa-xmark" style="color: #c4c4c5;"></i></div>
-            
-                </div>
-
-
                 <!-- <p id="no-products">No products in the cart.</p> -->
             </div>
 
@@ -101,14 +68,13 @@
             <div class="sub-checkout-grid">
 
                 <div class="subtotal-container">
-                    <p>Subtotal:</p>
-                    <p id="price-subtotal">$604.00</p>
+                    <p></p>
+                    <p id="price-subtotal"></p>
                 </div>
 
                     <div class="view-checkout-grid">
 
-                        <button><a href="#">View cart</a></button>
-                        <button><a href="#">Checkout</a></button>
+                        
 
                     </div>    
             </div>
@@ -149,7 +115,7 @@
 
         <div class="parent-products-container">
 
-            <div class="product-container">
+            <div class="product-container" data-id="1" data-name="Starlight Succulent" data-price="95" data-image="eCom images/product-02-400x432.jpg">
 
                 <div class="img-container">
                     <i class="add-to-cart fa-sharp fa-solid fa-cart-shopping fa-lg"></i>
@@ -173,7 +139,7 @@
                 </div>
             </div>
 
-            <div class="product-container">
+            <div class="product-container" data-id="2" data-name="Silver Mist" data-price="92" data-image="eCom images/product-03-400x434.jpg">
 
                 <div class="img-container">
                     <img src="eCom images/product-03-400x434.jpg" alt="">
@@ -196,7 +162,7 @@
                 </div>
             </div>
 
-            <div class="product-container">
+            <div class="product-container" data-id="3" data-name="Golden Glow" data-price="82" data-image="eCom images/product-04-400x434.jpg">
 
                 <div class="img-container">
                     <img src="eCom images/product-04-400x434.jpg" alt="">
@@ -329,12 +295,12 @@
             <div class="product-container">
 
                 <div class="img-container">
-                    <i class="add-to-cart fa-sharp fa-solid fa-cart-shopping fa-lg"></i>
+                    <i class="add-to-cart fa-sharp fa-solid fa-cart-shopping fa-lg" ></i>
                     <img src="eCom images/product-05-400x434.jpg" alt="">
                     
                 </div>
 
-                <div class="product-info-container">
+                <div class="product-info-container" data-id="4" data-name="Desert Bloom" data-price="95" data-image="eCom images/product-05-400x434.jpg">
                     <div id="ratings">
                         <i class="fa-regular fa-star"></i>
                         <i class="fa-regular fa-star"></i>
@@ -350,11 +316,11 @@
                 </div>
             </div>
 
-            <div class="product-container">
+            <div class="product-container" data-id="3" data-name="Golden Glow" data-price="82" data-image="eCom images/product-04-400x434.jpg">
 
                 <div class="img-container">
                     <img src="eCom images/product-03-400x434.jpg" alt="">
-                    <i class="add-to-cart fa-sharp fa-solid fa-cart-shopping fa-lg"></i>
+                    <i class="add-to-cart fa-sharp fa-solid fa-cart-shopping fa-lg" ></i>
                 </div>
 
                 <div class="product-info-container">
@@ -377,7 +343,7 @@
 
                 <div class="img-container">
                     <img src="eCom images/product-04-400x434.jpg" alt="">
-                    <i class="add-to-cart fa-sharp fa-solid fa-cart-shopping fa-lg"></i>
+                    <i class="add-to-cart fa-sharp fa-solid fa-cart-shopping fa-lg" data-id="2" data-name="Silver Mist" data-price="82" data-image="eCom images/product-04-400x434.jpg"></i>
                 </div>
 
                 <div class="product-info-container">

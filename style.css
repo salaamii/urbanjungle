@@ -64,6 +64,24 @@ ul {
     align-items: center;
 }
 
+.cart-amount-container span {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    width: max-content;
+    min-width: 20px;
+   
+    top: 29%;
+    right: -1%;
+    text-align: center;
+    
+    color: black;
+}
+
+.cart-amount-container {
+    cursor: pointer;
+}
+
 .hero-section {
     position: relative;
     height: 100vh;
