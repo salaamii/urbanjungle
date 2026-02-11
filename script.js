@@ -40,6 +40,8 @@ buttons.forEach(button => {
 
     button.addEventListener("click", () => {
 
+        
+
         const productEl = button.closest(".product-container");
 
         const id = productEl.dataset.id;
@@ -69,6 +71,20 @@ buttons.forEach(button => {
 
        console.log (cart);
         updateCart();
+
+        const originaLogo = button.className;
+
+        button.classList.remove("fa-cart-shopping");
+        button.classList.add("fa-circle-check");
+        button.style.color = "#08aa29";
+
+        
+
+        setTimeout (() => {
+            button.className = originaLogo;
+             button.style.color = "";
+        }, 1500);
+
     });
 });
 
