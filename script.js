@@ -1,6 +1,8 @@
 const cartIndicator = document.querySelector(".cart-amount-container");
 const cartHouse = document.getElementById("cart-house");
 const removeCart = document.getElementById("close-cart");
+const cartContainer = document.getElementById("cart-items-container");
+
 
 
 cartIndicator.addEventListener("click" , () => {
@@ -65,6 +67,7 @@ buttons.forEach(button => {
            
        }
 
+       console.log (cart);
         updateCart();
     });
 });
@@ -72,7 +75,7 @@ buttons.forEach(button => {
 
 function updateCart() {
 
-    const cartContainer = document.getElementById ("cart-items-container");
+   
     cartContainer.innerHTML = "";
 
     cart.forEach(product => {
@@ -93,7 +96,7 @@ function updateCart() {
                             </div>
                     </div>    
                     
-                    <div class="delete"><i class="fa-solid fa-xmark" style="color: #c4c4c5;"></i></div>
+                    <div class="delete"><i class="fa-solid fa-xmark" style="color: #c4c4c5; cursor: pointer;" data-id="${product.id}"></i></div>
         
         `;
 
@@ -103,6 +106,8 @@ function updateCart() {
     
     updateIndicator();
 };
+
+// FUnction to update cart items
 
 function updateIndicator() {
 
@@ -117,6 +122,16 @@ function updateIndicator() {
 
    
 }
+
+// delete product from cart
+
+cartContainer.addEventListener("click", (e) => {
+    if (e.target.classList.contains("fa-xmark")) {
+        const deleteId = e.target.dataset.id;
+        cart = cart.filter(item => item.id !== deleteId);
+        updateCart();
+    }
+});
 
 
 
