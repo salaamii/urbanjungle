@@ -148,6 +148,12 @@ button {
     
 }
 
+.decrease, .increase {
+
+    width: 30px;
+    height: 20px;
+}
+
 .cart-title-container {
     display: flex;
     justify-content: space-between;
@@ -206,9 +212,15 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 3rem;
     padding: 1rem;
     width: 100%;
+
+}
+
+.quantity-controls {
+    display: flex;
+    gap: 1rem;
 
 }
 

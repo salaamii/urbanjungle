@@ -72,7 +72,11 @@ buttons.forEach(button => {
        console.log (cart);
         updateCart();
 
+      
+
         const originaLogo = button.className;
+
+         button.disabled = true;
 
         button.classList.remove("fa-cart-shopping");
         button.classList.add("fa-circle-check");
@@ -80,9 +84,14 @@ buttons.forEach(button => {
 
         
 
-        setTimeout (() => {
-            button.className = originaLogo;
+       setTimeout (() => {
+            button.disabled = false;
+            button.classList.add("fa-cart-shopping");
+            button.classList.remove("fa-circle-check");
+            
              button.style.color = "";
+
+           
         }, 1500);
 
     });
@@ -107,10 +116,20 @@ function updateCart() {
 
                             <div class="item-details">
                                 <p id="product-name">${product.name}</p>
-                                <p>${product.quantity} x $${product.price}</p>
+
+
+                                <p>$${product.price}</p>
                                 
                             </div>
+
+                           
                     </div>    
+
+                     <div class="quantity-controls">
+                                    <button class="decrease" data-id="${product.id}">-</button>
+                                    <span>${product.quantity}</span>
+                                    <button class="increase" data-id="${product.id}">+</button>
+                                </div>
                     
                     <div class="delete"><i class="fa-solid fa-xmark" style="color: #c4c4c5; cursor: pointer;" data-id="${product.id}"></i></div>
         
@@ -121,6 +140,7 @@ function updateCart() {
 
     
     updateIndicator();
+    updateTotal();
 };
 
 // FUnction to update cart items
@@ -139,16 +159,61 @@ function updateIndicator() {
    
 }
 
-// delete product from cart
+// delete product from cart, increase or decrease product quantity
 
 cartContainer.addEventListener("click", (e) => {
+
+    const id = e.target.dataset.id;
+
     if (e.target.classList.contains("fa-xmark")) {
         const deleteId = e.target.dataset.id;
         cart = cart.filter(item => item.id !== deleteId);
         updateCart();
+        
+    } else if (e.target.classList.contains("increase")) {
+
+        const product = cart.find(item => item.id === id);
+
+        if (product) {
+            product.quantity +=1;
+            updateCart();
+        };
+
+    } else if (e.target.classList.contains("decrease")) {
+        const product = cart.find(item => item.id === id);
+
+        if (product) {
+            product.quantity -=1;
+
+            if (product.quantity <=0) {
+                cart = cart.filter(item =>item.id !== id);
+            }
+
+            updateCart();
+        }
     }
 });
 
+
+// update subTotal price in the cart
+
+const subtitle = document.getElementById("sub-title");
+const priceTotal = document.getElementById("price-subtotal");
+
+subtitle.textContent = "Sub-total";
+priceTotal.textContent = "$0.00";
+
+
+function updateTotal () {
+
+const total = cart.reduce((sum, item) => {
+
+    return sum + item.price * item.quantity;
+}, 0)
+
+priceTotal.textContent = `$${total.toFixed(2)}`;
+
+}
 
 
 
